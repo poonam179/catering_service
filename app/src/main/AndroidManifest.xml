@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.my.catering_service">
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cateringservicelogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cateringservicelogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateVisible|adjustPan"
+        tools:ignore="HardcodedDebugMode">
+        <activity android:name=".activity.CartMasterActivity"></activity>
+        <activity
+            android:name=".activity.Select_Member_Activity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activity.PackageManuActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activity.Package_View_Activity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activity.DashBoardActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="locked">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="locked" />
+        <activity android:name=".activity.VerifyOTPActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="locked" />
+
+        <receiver android:name=".services.OTPReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

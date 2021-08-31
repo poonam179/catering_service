@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ActivityPackageManu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PackageManuActivity">
+
+    <include
+        android:id="@+id/topapptollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/commant_app_toolbar"/>
+    <LinearLayout
+        android:id="@+id/LinerLayout_pck_manu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topapptollbar"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_10dp">
+        <TextView
+            android:id="@+id/txt_pck_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="r-1"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/txt_pck_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="450"/>
+        <TextView
+            android:id="@+id/txt_pck_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="450"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecycleView_Package_Manu_Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinerLayout_pck_manu"
+         />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_pck_manu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:foregroundGravity="right"
+        android:layout_margin="@dimen/margin_20dp"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="@dimen/margin_20dp"
+        app:fabSize="mini"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/next">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</RelativeLayout>

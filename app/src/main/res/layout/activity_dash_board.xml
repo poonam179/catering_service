@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashBoardActivity"
+    android:id="@+id/drawer_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include
+        android:id="@+id/topapptollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/commant_app_toolbar"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topapptollbar">
+
+            <com.asksira.loopingviewpager.LoopingViewPager
+                android:id="@+id/id_LoopingViewpager"
+
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:isInfinite="true"
+                app:autoScroll="true"
+                app:scrollInterval="2000"
+                app:wrap_content="true"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_20dp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroungColor">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:columnOrderPreserved="false"
+                    android:padding="8dp"
+                    android:rowCount="2">
+
+                    <!-- Row 1 -->
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dash_CardView_1"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/serviceone" />
+
+                            <TextView
+                                android:id="@+id/dash_TextView_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Wadding of buffet"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/lbl_size"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- Column 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dash_CardView_2"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/servicetwo" />
+
+                            <TextView
+                                android:id="@+id/dash_TextView_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Buffet"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/lbl_size"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- Row 2 -->
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dash_CardView_3"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/servicethree" />
+
+                            <TextView
+                                android:id="@+id/dash_TextView_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="wadding"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/lbl_size"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </GridLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+        <include
+            layout="@layout/activity_manu"/>
+    </RelativeLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

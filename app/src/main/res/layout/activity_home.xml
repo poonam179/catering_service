@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ActivityHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="fill_vertical"
+    android:theme="@style/MyNewTheme">
+
+    <LinearLayout
+        android:id="@+id/firstRl"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_selectcity"
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/catering" />
+
+        <TextView
+            android:id="@+id/id_txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/id_selectcity"
+            android:text="Select City"
+            android:textAlignment="center"
+            android:layout_marginTop="130dp"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/id_topview"
+            android:layout_below="@+id/id_txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:visibility="visible"
+            android:background="@color/red"></View>
+
+<TextView
+    android:id="@+id/id_TextCity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/middleview"
+    android:text="City"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="20dp"/>
+        <Spinner
+            android:id="@+id/simpleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/id_TextCity"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+             />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/SecondRl"
+        android:layout_below="@+id/firstRl"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_city"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/red"
+            android:text="Submit" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

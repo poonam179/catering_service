@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Select_Member_Activity"
+    android:background="@color/grey_light">
+    <include
+        android:id="@+id/topapptollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/commant_app_toolbar"/>
+    <LinearLayout
+        android:id="@+id/linear_select_member"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/topapptollbar"
+        android:background="@color/white">
+    <TextView
+        android:id="@+id/textView_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Members"
+        android:textSize="@dimen/margin_20dp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_below="@+id/topapptollbar"/>
+    <View
+        android:id="@+id/viewfirst"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textView_member"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@color/cardBorderColor"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_layout_Member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/viewfirst">
+        <EditText
+            android:id="@+id/edit_Member"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="Select Members"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/yellow"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorPrimaryDark" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Date And Time"
+            android:textColor="@color/red"
+            android:textSize="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Working Hours 8AM TO 9PM"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:textColor="@color/green"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:background="@color/cardBorderColor"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_date"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:hint="Date"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" >
+            <TextView
+                android:id="@+id/txt_edit_Date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Delivery On Your Selected Date And Time, Please Proceed To CheckOut..."
+            android:textColor="@color/green"
+            android:textSize="13.5sp"
+            android:layout_marginBottom="@dimen/margin_10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:text="Order Total"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="@dimen/margin_5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount Rs. 225450"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="@dimen/margin_10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charges: Rs.0"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="@dimen/margin_10dp"/>
+
+        <Button
+            android:id="@+id/btn_AddToMenuCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD TO MENU CART"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
